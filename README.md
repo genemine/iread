@@ -37,9 +37,11 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 
 # 3. Install
 After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory.<br>
-        **Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default: <br>
-        BASH: /bin/bash<br>
-        PERL: /usr/bin/perl<br>
-        Python:/usr/bin/python<br>
-        Just in case, if your BASH/PERL/Python is not in the default path, please ***change the first line (e.g. #!/usr/bin/python) in the scripts so that it correctly points to BASH/PERL/Python*** in your machine. 
+**Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default: <br>
+'''bash
+BASH: /bin/bash<br>
+PERL: /usr/bin/perl<br>
+Python:/usr/bin/python<br>
+'''
+Just in case, if your BASH/PERL/Python is not in the default path, please ***change the first line (e.g. #!/usr/bin/python) in the scripts so that it correctly points to BASH/PERL/Python*** in your machine. 
 
