@@ -1,0 +1,46 @@
+#!/bin/bash
+
+
+# specify input data in order and output settings
+bam=$1
+intronbed=$2
+output=$3
+purename=$4
+
+# prepare out directory
+if [ ! -d $output ];then 
+	mkdir -p $output 
+fi
+
+
+#filename=$(echo ${bam} | awk 'BEGIN {FS="/"}  {print $NF}')
+#purename=$(echo ${filename} | awk  'BEGIN {FS=".bam"} {print $1}')
+
+prefix="$output"/"$purename" 
+
+umapbam="${prefix}""_umap.bam"
+bambed="${prefix}""_bambed.bed"
+overlap="${prefix}""_overlap_initial.bed"
+
+
+
+# index bam file
+bai="$bam".bai
+if [ ! -e "$bai" ]; then
+	echo "BAM index does not exist. Create using Samtools."
+	samtools index $bam
+fi 
+
+
+# pre-filter bam using intron bed files
+samtools view -b -q 255 -@ 20  -L $intronbed $bam > $umapbam
+
+# covert to bed format
+#echo '--->   Converting bam to bed file'
+bam2bed —input bam -r tmp  -m 30G < "${umapbam}" |bedscore > $bambed
+
+# get intron-spanning reads
+bedmap --bp-ovr 1  --skip-unmapped --echo --sum --echo-overlap-size --echo-map-id-uniq  $intronbed $bambed > $overlap
+
+
+rm "${umapbam}"

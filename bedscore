@@ -1,0 +1,32 @@
+#!/usr/bin/perl
+use strict;
+
+# This script is to index reads and store it in a hash
+# Only accept pipe-in data from screen
+# Only for internal calling by this software package, not for user-end calling.
+# Hongdong Li, lhdcsu@gmail.com
+# Initially coded at Institute for Systems Biology, Seattle.
+# Revised: Feb. 23, Central South University
+#
+
+my %ref=();
+my $rlength=0;
+my $index=1;
+while (my $data=<STDIN>){
+		my @t=split '\t',$data;
+		$rlength = length($t[11]);
+		if (exists $ref{$t[3]}){
+			my @tt=split ':',$ref{$t[3]};
+			my $read=$tt[0].":$t[5]";
+			print "$t[0]\t$t[1]\t$t[2]\t$read\t1\t$rlength\n";
+		}else{
+			my $read="r$index".":$t[5]";
+			$ref{$t[3]}=$read;
+			print "$t[0]\t$t[1]\t$t[2]\t$read\t1\t$rlength\n";
+			$index++;
+		}	
+}
+
+
+
+
