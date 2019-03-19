@@ -38,7 +38,7 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 
 # 3. Install
 After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory. 
-<br>
+
 **Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default:
 ```bash
 BASH: /bin/bash
@@ -78,7 +78,7 @@ Nathan Price `Nathan.Price@systemsbiology.org`
 # How to cite?
 If you use this tool, please cite the following work.
 <br>
-    Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624
+`Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624`
 <br>
 
 **Funding:** This work was supported by the NIA U01AG006786 (NDP) and start-up funding (NO. 502041004) from Central South University (HDL). 
