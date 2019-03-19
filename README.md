@@ -11,8 +11,8 @@ The source codes are tested and work on both MacOS and Linux operating system. T
 
 | **Version** | **Changes** |
 | - | - |
-| [iREAD_0.8.0.zip](http://www.genemine.org/codes/iREAD_0.8.0.zip) | Multi-core computing implemented;         <br>Outputs merged into a single | file.
-| [iREAD_0.6.0.zip](http://www.genemine.org/codes/iREAD_0.6.0.zip) |  |
+| [iREAD_0.8.0.zip](https://github.com/genemine/iread/archive/master.zip) | Multi-core computing implemented;         <br>Outputs merged into a single | file.
+| [iREAD_0.6.0.zip](https://github.com/genemine/iread/raw/master/history_version/iREAD_0.6.0.zip) |  |
 
 * **Independent intron annotation(input files of iREAD)**
 
