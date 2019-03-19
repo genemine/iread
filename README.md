@@ -28,3 +28,12 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 
 `Notes: Users can calculate independent intron annotations of their interested species/versions using [GTFtools](http://www.genemine.org/gtftools.php)`
 <br>
+
+# 2. Dependencies
+* Samtools(version:1.2)
+* Bedops(version:2.4.20), available at: https://bedops.readthedocs.io/en/latest/
+* The PERL module Parallel::ForkManager needs to be installed to support multi-core computing
+* python module: argparse. If not installed, run 'pip install argparse' from shell to install.
+
+# 3. Install
+After downloading the source file, unzip it, and <font color=red>add the iREAD package path to your environmental variable PATH</font> by modifying your .bashrc or .bash_profile file in your home directory.
