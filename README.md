@@ -36,12 +36,23 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 * python module: argparse. If not installed, run 'pip install argparse' from shell to install.
 
 # 3. Install
-After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory.<br>
-**Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default: <br>
+After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory. <br>
+**Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default:
 ```bash
 BASH: /bin/bash
 PERL: /usr/bin/perl
-Python:/usr/bin/python
+Python: /usr/bin/python
 ```
-Just in case, if your BASH/PERL/Python is not in the default path, please ***change the first line (e.g. #!/usr/bin/python) in the scripts so that it correctly points to BASH/PERL/Python*** in your machine. 
+Just in case, if your BASH/PERL/Python is not in the default path, please ***change the first line (e.g. #!/usr/bin/python) in the scripts so that it correctly points to BASH/PERL/Python*** in your machine. <br>
 
+**Note 2:** And, check that all scripts in the package are excecutable.
+
+# 4. Usage
+## 4.1 Run iREAD
+Using iREAD is very simple. Only one command needs to be issued form command line, and you would be able to identify IR events from RNA-seq data. For illustration purpose, we have included a test BAM file and a intron coordinate text file along with the iREAD package for testing the package. After you unzip the source package, you should see two folders inside: one is **data** containing test data, the other is **meta** containing text files of intron coordinates for mouse (Ensembl ver75) and human(Ensembl ver77), respectively.
+<br><br>
+To run the iREAD for IR detection, assuming that you are in the folder of iREAD, just issue the following command from shell:
+```bash
+iread.py data/mouse_test.bam meta/intron_mouse_3875.bed -o tmp_output -t 62000000
+```
+**Notes:** Regarding the command above, -t specifies the totally number of mapped reads, which is needed to be provided for calculating FPKM. For this test data, the total number of mapped reads is 62000000 (reads mapped to the whole genome). The BAM file was aligned using STAR. After you run the above command, you will see screen output as below:
