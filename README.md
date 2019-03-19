@@ -1,4 +1,4 @@
-![iREAD](https://github.com/genemine/iread/blob/master/iREAD_files/ir1.png)
+![iREAD](https://github.com/genemine/iread/blob/master/pictures/ir1.png)
 # 1. iREAD
 ## 1.1 Description
 iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect intron retention(IR) events from RNA-seq datasets. Independent introns, referring to those introns that do not overlap with any exons of any splice isoforms, are used for detecting IRs. iREAD takes `two input files`: (1) a BAM file representing transcritome, and a bed-like text file containing independent intron coordinates, and output intron retention events based on a set of criteria that filter for reliable IR events. These criteria involves the number of reads/fragments in intronic regions, FPKM, junction reads, read distribution patterns within an intron.
@@ -60,7 +60,7 @@ To run the iREAD for IR detection, assuming that you are in the folder of iREAD,
 iread.py data/mouse_test.bam meta/intron_mouse_3875.bed -o tmp_output -t 62000000
 ```
 **Notes:** Regarding the command above, -t specifies the totally number of mapped reads, which is needed to be provided for calculating FPKM. For this test data, the total number of mapped reads is 62000000 (reads mapped to the whole genome). The BAM file was aligned using STAR. After you run the above command, you will see screen output as below:
-![running_screen](https://github.com/genemine/iread/blob/master/iREAD_files/screen.png)
+![running_screen](https://github.com/genemine/iread/blob/master/pictures/screen.png)
 <br>
 It takes a few seconds to finish. After it is done, a folder named 'tmp_output' would be generated which contains output files inside. The file with suffix being .ir.txt records the identified IR events from your given BAM files.
 
