@@ -11,21 +11,24 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 
 | **Version** | **Changes** |
 | - | - |
-| [iREAD_0.8.0.zip](http://www.genemine.org/codes/iREAD_0.8.0.zip) | Multi-core computing implemented; <br>Outputs merged into a single | file.
+| [iREAD_0.8.0.zip](http://www.genemine.org/codes/iREAD_0.8.0.zip) | Multi-core computing implemented;         <br>Outputs merged into a single | file.
 | [iREAD_0.6.0.zip](http://www.genemine.org/codes/iREAD_0.6.0.zip) |  |
 
 * **Independent intron annotation(input files of iREAD)**
 
 >human
-<br>[human_introns_ensemblv77](http://www.genemine.org/introns/intron_annotation_human_ensemblv77.bed) (Also included in the 'meta' folder in iREAD package)<br>
-[human_introns_gencodev25](http://www.genemine.org/introns/intron_annotation_human_gencodev25.bed)<br>
-[human_introns_gencodev19](http://www.genemine.org/introns/intron_annotation_human_gencodev19.bed)<br>
+<br>
+    [human_introns_ensemblv77](http://www.genemine.org/introns/intron_annotation_human_ensemblv77.bed) (Also included in the 'meta' folder in iREAD package)<br>
+    [human_introns_gencodev25](http://www.genemine.org/introns/intron_annotation_human_gencodev25.bed)<br>
+    [human_introns_gencodev19](http://www.genemine.org/introns/intron_annotation_human_gencodev19.bed)<br>
 >mouse
-<br>[mouse_introns_ensemblv75](http://www.genemine.org/introns/intron_annotation_mouse_ensemblv75.bed) (Also included in the 'meta' folder in iREAD package)<br>
-[mouse_introns_gencodevM10](http://www.genemine.org/introns/intron_annotation_mouse_gencodevM10.bed)<br>
-[mouse_introns_gencodevM1](http://www.genemine.org/introns/intron_annotation_mouse_gencodevM1.bed)<br>
+<br>
+    [mouse_introns_ensemblv75](http://www.genemine.org/introns/intron_annotation_mouse_ensemblv75.bed) (Also included in the 'meta' folder in iREAD package)<br>
+    [mouse_introns_gencodevM10](http://www.genemine.org/introns/intron_annotation_mouse_gencodevM10.bed)<br>
+    [mouse_introns_gencodevM1](http://www.genemine.org/introns/intron_annotation_mouse_gencodevM1.bed)<br>
 >others
-<br>[drosophila_introns_ensemblv84](http://www.genemine.org/introns/intron_annotation_drosophila_ensemblv84.bed)<br>
+<br>
+    [drosophila_introns_ensemblv84](http://www.genemine.org/introns/intron_annotation_drosophila_ensemblv84.bed)<br>
 
 **Notes: Users can calculate independent intron annotations of their interested species/versions using [GTFtools](http://www.genemine.org/gtftools.php)**
 <br>
@@ -37,7 +40,8 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 * python module: argparse. If not installed, run 'pip install argparse' from shell to install.
 
 # 3. Install
-After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory. <br>
+After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory. 
+<br>
 **Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default:
 ```bash
 BASH: /bin/bash
@@ -68,12 +72,15 @@ iread.py -h
 ```
 
 # 5. Contact
-If any questions, please do not hesitate to contact me at:<br>
+If any questions, please do not hesitate to contact me at:
+<br>
 Hongdong Li `hongdong@csu.edu.cn` or `Hongdong.Li@systemsbiology.org`
+<br>
 Nathan Price `Nathan.Price@systemsbiology.org`
 
 # How to cite?
 If you use this tool, please cite the following work.
+<br>
 `Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624`
 <br>
 
