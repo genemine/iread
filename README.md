@@ -7,7 +7,7 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 
 * **software**
 
-    The source codes are tested and work on both MacOS and Linux operating system. They are freely available for non-commercial use.<br>
+The source codes are tested and work on both MacOS and Linux operating system. They are freely available for non-commercial use.<br>
 
 | **Version** | **Changes** |
 | - | - |
