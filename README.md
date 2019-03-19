@@ -26,7 +26,7 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 >others
 <br>[drosophila_introns_ensemblv84](http://www.genemine.org/introns/intron_annotation_drosophila_ensemblv84.bed)<br>
 
-`Notes: Users can calculate independent intron annotations of their interested species/versions using [GTFtools](http://www.genemine.org/gtftools.php)`
+**Notes: Users can calculate independent intron annotations of their interested species/versions using [GTFtools](http://www.genemine.org/gtftools.php)**
 <br>
 
 # 2. Dependencies
@@ -36,4 +36,10 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 * python module: argparse. If not installed, run 'pip install argparse' from shell to install.
 
 # 3. Install
-After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory.
+After downloading the source file, unzip it, and ***add the iREAD package path to your environmental variable PATH*** by modifying your .bashrc or .bash_profile file in your home directory.<br>
+`**Note 1:** In the first line of the BASH, PERL and Python scripts in iREAD, the path for BASH, PERL and Python is set as follows by default: <br>
+BASH: /bin/bash<br>
+PERL: /usr/bin/perl<br>
+Python:/usr/bin/python<br>
+Just in case, if your BASH/PERL/Python is not in the default path, please ***change the first line (e.g. #!/usr/bin/python) in the scripts so that it correctly points to BASH/PERL/Python*** in your machine. 
+`
