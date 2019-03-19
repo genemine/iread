@@ -16,18 +16,15 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 
 * **Independent intron annotation(input files of iREAD)**
 
->human
->>
+>human<br>
 [human_introns_ensemblv77](http://www.genemine.org/introns/intron_annotation_human_ensemblv77.bed) (Also included in the 'meta' folder in iREAD package)<br>
 [human_introns_gencodev25](http://www.genemine.org/introns/intron_annotation_human_gencodev25.bed)<br>
 [human_introns_gencodev19](http://www.genemine.org/introns/intron_annotation_human_gencodev19.bed)<br>
->mouse
->>
+>mouse<br>
 [mouse_introns_ensemblv75](http://www.genemine.org/introns/intron_annotation_mouse_ensemblv75.bed) (Also included in the 'meta' folder in iREAD package)<br>
 [mouse_introns_gencodevM10](http://www.genemine.org/introns/intron_annotation_mouse_gencodevM10.bed)<br>
 [mouse_introns_gencodevM1](http://www.genemine.org/introns/intron_annotation_mouse_gencodevM1.bed)<br>
->others
->>
+>others<br>
 [drosophila_introns_ensemblv84](http://www.genemine.org/introns/intron_annotation_drosophila_ensemblv84.bed)<br>
 
 **Notes: Users can calculate independent intron annotations of their interested species/versions using [GTFtools](http://www.genemine.org/gtftools.php)**
@@ -81,7 +78,7 @@ Nathan Price `Nathan.Price@systemsbiology.org`
 # How to cite?
 If you use this tool, please cite the following work.
 <br>
-        Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624
+    Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624
 <br>
 
 **Funding:** This work was supported by the NIA U01AG006786 (NDP) and start-up funding (NO. 502041004) from Central South University (HDL). 
