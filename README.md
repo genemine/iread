@@ -1,3 +1,4 @@
+![iREAD](https://github.com/genemine/iread/blob/master/iREAD_files/ir1.png)
 # 1. iREAD
 ## 1.1 Description
 iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect intron retention(IR) events from RNA-seq datasets. Independent introns, referring to those introns that do not overlap with any exons of any splice isoforms, are used for detecting IRs. iREAD takes `two input files`: (1) a BAM file representing transcritome, and a bed-like text file containing independent intron coordinates, and output intron retention events based on a set of criteria that filter for reliable IR events. These criteria involves the number of reads/fragments in intronic regions, FPKM, junction reads, read distribution patterns within an intron.
@@ -56,3 +57,24 @@ To run the iREAD for IR detection, assuming that you are in the folder of iREAD,
 iread.py data/mouse_test.bam meta/intron_mouse_3875.bed -o tmp_output -t 62000000
 ```
 **Notes:** Regarding the command above, -t specifies the totally number of mapped reads, which is needed to be provided for calculating FPKM. For this test data, the total number of mapped reads is 62000000 (reads mapped to the whole genome). The BAM file was aligned using STAR. After you run the above command, you will see screen output as below:
+![running_screen](https://github.com/genemine/iread/blob/master/iREAD_files/screen.png)
+<br>
+It takes a few seconds to finish. After it is done, a folder named 'tmp_output' would be generated which contains output files inside. The file with suffix being .ir.txt records the identified IR events from your given BAM files.
+
+## 4.2 Help document
+To get help, use:
+```bash
+iread.py -h
+```
+
+# 5. Contact
+If any questions, please do not hesitate to contact me at:<br>
+Hongdong Li `hongdong@csu.edu.cn` or `Hongdong.Li@systemsbiology.org`
+Nathan Price `Nathan.Price@systemsbiology.org`
+
+# How to cite?
+If you use this tool, please cite the following work.
+`Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624`
+<br>
+
+**Funding:** This work was supported by the NIA U01AG006786 (NDP) and start-up funding (NO. 502041004) from Central South University (HDL). 
