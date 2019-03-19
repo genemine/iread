@@ -36,4 +36,4 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 * python module: argparse. If not installed, run 'pip install argparse' from shell to install.
 
 # 3. Install
-After downloading the source file, unzip it, and <font color=red>add the iREAD package path to your environmental variable PATH</font> by modifying your .bashrc or .bash_profile file in your home directory.
+After downloading the source file, unzip it, and <font color="#0000dd">add the iREAD package path to your environmental variable PATH</font> by modifying your .bashrc or .bash_profile file in your home directory.
