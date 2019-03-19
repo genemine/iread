@@ -18,17 +18,17 @@ The source codes are tested and work on both MacOS and Linux operating system. T
 * **Independent intron annotation(input files of iREAD)**
 
 >human<br>
-[human_introns_ensemblv77](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_human_ensemblv77.bed) (Also included in the 'meta' folder in iREAD package)<br>
-[human_introns_gencodev25](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_human_gencodev25.bed)<br>
-[human_introns_gencodev19](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_human_gencodev19.bed)<br>
+[human_introns_ensemblv77](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_human_ensemblv77.bed) (Also included in the 'meta' folder in iREAD package)<br>
+[human_introns_gencodev25](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_human_gencodev25.bed)<br>
+[human_introns_gencodev19](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_human_gencodev19.bed)<br>
 >
 >mouse<br>
-[mouse_introns_ensemblv75](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_mouse_ensemblv75.bed) (Also included in the 'meta' folder in iREAD package)<br>
-[mouse_introns_gencodevM10](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_mouse_gencodevM10.bed)<br>
-[mouse_introns_gencodevM1](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_mouse_gencodevM1.bed)<br>
+[mouse_introns_ensemblv75](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_mouse_ensemblv75.bed) (Also included in the 'meta' folder in iREAD package)<br>
+[mouse_introns_gencodevM10](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_mouse_gencodevM10.bed)<br>
+[mouse_introns_gencodevM1](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_mouse_gencodevM1.bed)<br>
 >
 >others<br>
-[drosophila_introns_ensemblv84](https://raw.githubusercontent.com/genemine/iread/master/independent_intron_annotation/intron_annotation_drosophila_ensemblv84.bed)<br>
+[drosophila_introns_ensemblv84](https://github.com/genemine/iread/tree/master/independent_intron_annotation/intron_annotation_drosophila_ensemblv84.bed)<br>
 
 **Notes: Users can calculate independent intron annotations of their interested species/versions using [GTFtools](http://www.genemine.org/gtftools.php)**
 <br>
