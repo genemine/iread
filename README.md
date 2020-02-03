@@ -81,7 +81,7 @@ Nathan Price `Nathan.Price@systemsbiology.org`
 # How to cite?
 If you use this tool, please cite the following work.
 <br>
->Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, bioRxiv 135624; doi: https://doi.org/10.1101/135624
+>Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, BMC Genomics, 2019, doi: 10.1186/s12864-020-6541-0
 <br>
 
 **Funding:** This work was supported by the NIA U01AG006786 (NDP) and start-up funding (NO. 502041004) from Central South University (HDL). 
