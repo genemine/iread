@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 # This is the command line entry point to call intron retention.
 # coded at: Central South University, Changsha 410083, P.R. China
 # coded by: Hongdong Li. 
@@ -116,12 +116,11 @@ cmd_reduce = 'bam2intron ' +" "+bam_file + " " + intron_file + " " + output_fold
 os.system(cmd_reduce)
 
 # count intronic reads
-cmd_count = 'count_intronic_reads.pl ' + output_folder + ' ' + pure_file_name + ' '+ n_cores
+cmd_count = 'count_intronic_reads.pl ' + output_folder + ' ' + pure_file_name + ' '+ n_cores + ' '+ intron_file
 #cmd_count = 'count_intronic_reads_singlecore.pl ' + output_folder + ' ' + pure_file_name
 os.system(cmd_count)
 
 # combine
-
 
 # determine IR events based on user-defined parameters.
 cmd_assess = 'assess_intron.py ' + output_folder+" "+pure_file_name+" "+str(number_of_reads)+" "+ str(junction_reads)+" "+ str(entropy)+" "+str(fpkm)+" "+ str(total_reads)+" "+ str(bias)

@@ -18,7 +18,7 @@ use Parallel::ForkManager;
 $dir=$ARGV[0];  # input directory
 $pure_file_name = $ARGV[1];
 $ncore = $ARGV[2];
-
+$intron_file=$ARGV[3];
 
 ############################################
 ################# main   ###################
@@ -252,7 +252,7 @@ foreach my $olapfile (@olapfiles) {
 	#}
 
 	# calculate entropy for intron
-	if ($count >= 10 ){$entropy_score=&cal_entropy_score(@bincount);}
+	if ($count >= 0 ){$entropy_score=&cal_entropy_score(@bincount);}
 
 	# increase paircounts for the corresponding gene	
 	#$gpaircount{$gene}+=$paircount;
@@ -263,7 +263,7 @@ foreach my $olapfile (@olapfiles) {
 
 
 	# print counts for an intron
-	if ($count >= 10 && $junctioncount >=1 && $entropy_score > 0.01){
+	if ($count >= 0 && $junctioncount >= 0 && $entropy_score >=0){
 		print NEW1 "@intron\t$introndash\t$count\t$junctioncount\t$entropy_score\n";
 		#$bincountstr=join("\t",@bincount);
 
@@ -289,15 +289,34 @@ unlink($overlapfile);
 # combine parts into a single file
 @allparts= glob "$dir/*part";
 open CMB,">$intron_level";
+%ir_kept=();
 foreach $ipart (@allparts){
 	open FI,"$ipart";
 	while ($line=<FI>){
 		print CMB "$line";
+		@t=split '\t',$line;
+		$ir_kept{$t[5]} = 0;
 	}
 	close FI;
 	unlink($ipart);
 }
+
+
+# add all other introns that are in the inut list of independent introns to keep the output list the same length as the input list.
+open FILE,"$intron_file" or die "cannot open the intron read file";
+while ($line=<FILE>){
+	chomp $line;
+	@t=split '\t',$line;
+	$irid = join("-", @t);
+	if (exists($ir_kept{$irid})){}else{
+		print CMB "$line\t$irid\t0\t0\t0.000000\n";
+	}
+}
+close FILE;
 close CMB;
+
+
+
 
 
 ##############################################
