@@ -293,9 +293,10 @@ open CMB,">$intron_level";
 foreach $ipart (@allparts){
 	open FI,"$ipart";
 	while ($line=<FI>){
-		print CMB "$line";
+		chomp $line;
+		#print CMB "$line";
 		@t=split '\t',$line;
-		$ir_kept{$t[5]} = 0;
+		$ir_kept{$t[5]} = $line;
 	}
 	close FI;
 	unlink($ipart);
@@ -308,7 +309,9 @@ while ($line=<FILE>){
 	chomp $line;
 	@t=split '\t',$line;
 	$irid = join("-", @t);
-	if (exists($ir_kept{$irid})){}else{
+	if (exists($ir_kept{$irid})){
+		print CMB "$ir_kept{$irid}\n";				
+	}else{
 		print CMB "$line\t$irid\t0\t0\t0.000000\n";
 	}
 }
