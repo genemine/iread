@@ -173,7 +173,7 @@ foreach my $olapfile (@olapfiles) {
 
 		# judge overlapping introns
 		$judge1=0;$judge2=0;$judge3=0;$fullin=0;
-		if ($rstart>$intron_start+1 && $rstart< $intron_end-1) {$judge1=1;}
+		if ($rstart>$intron_start+1 && $rtart< $intron_end-1) {$judge1=1;}
 		if ($rend  >$intron_start+1 && $rend < $intron_end-1) {$judge2=1;}
 		if ($rstart < $intron_start && $rend > $intron_end  && $read_span{$read} == $rlength ) {$judge3=1;}
 		if ($rstart>=$intron_start && $rend<=$intron_end){$fullin=1;}
