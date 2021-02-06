@@ -42,6 +42,8 @@ print('--->   Identifying intron retention events')
 f  = open(intron_reads_file)
 fo = open(output_file,'w')
 
+
+#1	3207317	3213438	ENSMUSG00000051951	6121	1-3207317-3213438-ENSMUSG00000051951-6121	0	0	0.000000
 fo.write('intron_id\tfragments\tjunction_reads\tfpkm\tentropy_score\ttotal_fragments\tretention_at_given_cutoff\n')
 for line in f:
 	if line[0] != '#':

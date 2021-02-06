@@ -4,5 +4,5 @@ bam="./data/mouse_test.bam"
 intronbed="meta/intron_mouse_3875.bed"
 output="./tmp_output"
 total_mapped=62000000
-ncore=1
-iread.py $bam $intronbed -k $ncore -o $output -t $total_mapped
+iread.py $bam $intronbed -o $output -t $total_mapped -q 255
+

@@ -23,6 +23,7 @@ parser.add_argument('-f','--fpkm',help="threshold of FPKM to determine an intron
 parser.add_argument('-e','--entropy',help="threshold of entropy_score to determine an intron retention event. Range of this parameter is [0,1]. This score measures to which extent reads are uniformly distributed aross the whole region for a given intron. Default: 0.9")
 parser.add_argument('-t','--total_reads',help="The total number of mapped reads/fragments from read aligners, say 50 million. This is used to calculate FPKM. Users can use samtools to calculate the number of mapped reads from the input bam file. It's needed to be provided by user.")
 parser.add_argument('-k','--n_cores',help="The number of CPU cores to use. Default to n-2, where n is the total number of cores available.")
+parser.add_argument('-q','--MAPQ',help="The MAPQ score for retrieving uniquely mapped reads. Default to 255, which is the score for unique mapping reads in STAR. If other aligners such as Hisat or TopHat are used, change this score accordingly.")
 parser.add_argument('-b','--bias',help="an intron-length correction term for calculating FPKM of introns. This means that the length of intron used for calculating FPKM will be the true intron length plus this correction term. This is used to prevent very high FPKM for short introns. Default: 100.")
 
 args = parser.parse_args()   # parse command-line arguments
@@ -103,6 +104,13 @@ else:
 	n_cores = 'default'
 
 
+# scores for uniquely mapped reads
+if args.MAPQ:
+	MAPQ = args.MAPQ
+else:
+	MAPQ = 255   # 255 for STAR
+
+
 
 # correction term for intron lengths
 if args.bias:
@@ -110,9 +118,8 @@ if args.bias:
 else:
 	bias = 100
 
-
 # reduce bam to intronic regions
-cmd_reduce = 'bam2intron ' +" "+bam_file + " " + intron_file + " " + output_folder + " " + pure_file_name
+cmd_reduce = 'bam2intron ' + ' ' + bam_file + ' ' + intron_file + ' ' + output_folder + ' ' + pure_file_name + ' ' +str(MAPQ)
 os.system(cmd_reduce)
 
 # count intronic reads
