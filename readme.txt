@@ -1,4 +1,4 @@
-software:	iRADAR
+software:	iREAD
 coded with: 	perl(v5.18.2), python(v2.7)
 function: 	identify intron retention events
 input: 		RNA-seq BAM file. Currently BAM file from STAR(version:2.5.2b) was tested. 
