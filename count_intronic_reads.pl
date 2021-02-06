@@ -206,7 +206,7 @@ foreach my $olapfile (@olapfiles) {
 				$thisbinend  =$binend[$binid];
 				$thisdifference=abs($read_span{$read}-$rlength);
 				$binjudge=0;
-				if ($rstart>=$thisbinstart && $rtart< $thisbinend) {$binjudge=1;}
+				if ($rstart>=$thisbinstart && $rstart< $thisbinend) {$binjudge=1;}
 				if ($rend  >=$thisbinstart && $rend < $thisbinend) {$binjudge=1;}
 				if ($rstart<=$thisbinstart && $rend >=$thisbinend  && $thisdifference == 0 ) {$binjudge=1;}
 				if ($binjudge == 1){$bincount[$binid]++;}
