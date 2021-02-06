@@ -9,12 +9,8 @@ iREAD (intron **R**Etention **A**nalysis and **D**etector)is a tool to detect in
 * **software**
 
 The source codes are tested and work on both MacOS and Linux operating system. They are freely available for non-commercial use.<br>
-
-| **Version** | **Changes** |
-| - | - |
-| [iREAD_0.8.5.zip](https://github.com/genemine/iread/raw/master/history_version/iREAD_0.8.5.zip) | Include all input independent introns in the IR ouput file no matter they are retained or not.
-| [iREAD_0.8.0.zip](https://github.com/genemine/iread/raw/master/history_version/iREAD_0.8.0.zip) | Multi-core computing implemented;         <br>Outputs merged into a single file.
-| [iREAD_0.6.0.zip](https://github.com/genemine/iread/raw/master/history_version/iREAD_0.6.0.zip) |  |
+* **Updates**
+Updates are re-designed using the 'releases' functionality.
 
 * **Independent intron annotation(input files of iREAD)**
 
