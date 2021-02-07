@@ -7,6 +7,9 @@ intronbed=$2
 output=$3
 purename=$4
 MAPQ=$5
+threads=$6
+mem=$7
+
 
 # prepare out directory
 if [ ! -d $output ];then 
@@ -33,11 +36,11 @@ if [ ! -e "$bai" ]; then
 fi 
 
 # pre-filter bam using intron bed files
-samtools view -b -q $MAPQ -@ 20  -L $intronbed $bam > $umapbam
+samtools view -b -q $MAPQ -@ $threads  -L $intronbed $bam > $umapbam
 
 # covert to bed format
 #echo '--->   Converting bam to bed file'
-bam2bed —input bam -r tmp  -m 30G < "${umapbam}" |bedscore > $bambed
+bam2bed —input bam -r tmp  -m $mem < "${umapbam}" |bedscore > $bambed
 
 # get intron-spanning reads
 bedmap --bp-ovr 1  --skip-unmapped --echo --sum --echo-overlap-size --echo-map-id-uniq  $intronbed $bambed > $overlap

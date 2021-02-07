@@ -24,6 +24,8 @@ parser.add_argument('-e','--entropy',help="threshold of entropy_score to determi
 parser.add_argument('-t','--total_reads',help="The total number of mapped reads/fragments from read aligners, say 50 million. This is used to calculate FPKM. Users can use samtools to calculate the number of mapped reads from the input bam file. It's needed to be provided by user.")
 parser.add_argument('-k','--n_cores',help="The number of CPU cores to use. Default to n-2, where n is the total number of cores available.")
 parser.add_argument('-q','--MAPQ',help="The MAPQ score for retrieving uniquely mapped reads. Default to 255, which is the score for unique mapping reads in STAR. If other aligners such as Hisat or TopHat are used, change this score accordingly.")
+parser.add_argument('-s','--threads', help="Number of threads to use. Default to 20.")
+parser.add_argument('-m','--mem', help="memory to use (unit: G). Default to 30.")
 parser.add_argument('-b','--bias',help="an intron-length correction term for calculating FPKM of introns. This means that the length of intron used for calculating FPKM will be the true intron length plus this correction term. This is used to prevent very high FPKM for short introns. Default: 100.")
 
 args = parser.parse_args()   # parse command-line arguments
@@ -109,8 +111,20 @@ if args.MAPQ:
 	MAPQ = args.MAPQ
 else:
 	MAPQ = 255   # 255 for STAR
+# number of threads
+if args.threads:
+	threads = args.threads
+else:
+	threads = 20
 
 
+
+
+# memory settings
+if args.mem:
+	mem = args.mem
+else:
+	mem = 30
 
 # correction term for intron lengths
 if args.bias:
@@ -119,7 +133,8 @@ else:
 	bias = 100
 
 # reduce bam to intronic regions
-cmd_reduce = 'bam2intron ' + ' ' + bam_file + ' ' + intron_file + ' ' + output_folder + ' ' + pure_file_name + ' ' +str(MAPQ)
+cmd_reduce = 'bam2intron ' + ' ' + bam_file + ' ' + intron_file + ' ' + output_folder + ' ' + pure_file_name + ' ' +str(MAPQ) + ' '+str(threads)+' '+str(mem)+'G'
+#print(cmd_reduce)
 os.system(cmd_reduce)
 
 # count intronic reads
