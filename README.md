@@ -81,4 +81,4 @@ If you use this tool, please cite the following work.
 >Hong-Dong Li, Cory C. Funk, Nathan D. Price, iREAD: A Tool For Intron Retention Detection From RNA-seq Data, BMC Genomics, 2020, 21:128
 <br>
 
-**Funding:** This work was supported by the Natural Science Foundation of China (No. 565 61702556) (HDL), the NIA U01AG006786 (NDP) and the start-up funding (NO. 566 502041004) from Central South University (HDL). 
+**Funding:** This work was supported by the Natural Science Foundation of China (No. 61702556) (HDL), the NIA U01AG006786 (NDP) and the start-up funding (NO.502041004) from Central South University (HDL). 
