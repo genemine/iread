@@ -62,7 +62,15 @@ iread.py data/mouse_test.bam meta/intron_mouse_3875.bed -o tmp_output -t 6200000
 <br>
 It takes a few seconds to finish. After it is done, a folder named 'tmp_output' would be generated which contains output files inside. The file with suffix being .ir.txt records the identified IR events from your given BAM files.
 
-## 4.2 Help document
+## 4.2 Combine IR expression from multiple samples
+You can combine expression of retained introns from multiple samples into a table by running the following command from shell:
+```bash
+python combine_ir_expr_into_matrix.py ir_results my_exp
+```
+**Notes:** **ir_results** is a folder containing outputfiles of iREAD on multiple samples. **my_exp** is a prefix for output files.
+
+
+## 4.3 Help document
 To get help, use:
 ```bash
 iread.py -h
