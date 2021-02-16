@@ -1,2 +1,0 @@
-
-python3 combine_ir_expr_into_matrix.py ir_results my_exp
