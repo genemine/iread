@@ -79,7 +79,7 @@ iread.py -h
 # 5. Contact
 If any questions, please do not hesitate to contact me at:
 <br>
-Hongdong Li `hongdong@csu.edu.cn` or `Hongdong.Li@systemsbiology.org`
+Hongdong Li `hongdong@csu.edu.cn`
 <br>
 Nathan Price `Nathan.Price@systemsbiology.org`
 
