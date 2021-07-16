@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 # Function:
 # 1. count reads which are truly expressed from intron regions
 # 2. Calculate entropy for each intron
