@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 # call intron retention events using a set of criteria.
 # coded at: Central South University, Changsha 410083, P.R. China
